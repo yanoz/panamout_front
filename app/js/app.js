@@ -2,14 +2,13 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('panamoutApp', [
+var panamoutApp = angular.module('panamoutApp', [
   'ngRoute',
-
   'panamoutControllers',
   'panamoutServices'
 ]);
 
-phonecatApp.config(['$routeProvider',
+panamoutApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/spots', {
