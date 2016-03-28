@@ -4,10 +4,11 @@
 
 var panamoutControllers = angular.module('panamoutControllers', []);
 
-panamoutControllers.controller('SpotListCtrl', ['$scope', 'Spot',
+panamoutControllers.controller('SearchCtrl', ['$scope', 'Spot',
   function($scope, Spot) {
-    $scope.spots = Spot.query();
-    $scope.orderProp = 'age';
+    $scope.submit = function() {
+        alert($scope.search)
+      };
   }]);
 
 panamoutControllers.controller('SpotDetailCtrl', ['$scope', '$routeParams', 'Spot',
@@ -20,3 +21,5 @@ panamoutControllers.controller('SpotDetailCtrl', ['$scope', '$routeParams', 'Spo
       $scope.mainImageUrl = imageUrl;
     };
   }]);
+
+
